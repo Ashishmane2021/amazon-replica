@@ -1,0 +1,630 @@
+* {
+    margin: 0;
+    font-family: arial;
+    border: border-box;
+}
+
+.slidingmenu{
+    width: -365px;
+    height: 100%;
+    background-color: white;
+    position:fixed;
+    
+}
+.border {
+    border: 1px solid transparent;
+}
+
+.border:hover {
+    border: 1px solid white;
+}
+
+.navbar {
+    height: 60px;
+    color: white;
+    background-color: #0f1111;
+    display: flex;
+    position: fixed;
+
+}
+
+.nav-logo {
+    height: 50px;
+    width: 110px;
+    margin-right: 15px;
+
+}
+
+.logo {
+    background-image: url("amazon-logo.jpg");
+    height: 50px;
+    width: 100px;
+    margin-left: 10px;
+    background-size: cover;
+}
+
+.address {
+    align-content: center;
+}
+
+.address1 {
+    color: #cccccc;
+    font-size: 0.8rem;
+    padding-left: 20px;
+
+}
+
+.country {
+    font-size: 1rem;
+
+}
+
+.adress2 {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search {
+    display: flex;
+    width: 900px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+.search-select {
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+}
+
+option {
+    font-weight: bold;
+}
+
+.search-icon {
+    width: 45px;
+    border-radius: 5px;
+    background-color: rgb(253, 167, 18);
+    text-align: center;
+    align-content: center;
+}
+
+.search-input {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.nav-lang {
+    width: 40px;
+    text-align: center;
+    align-content: center;
+    margin-left: 30px;
+}
+
+.nav-signin {
+    align-content: center;
+    margin-left: 25px;
+    size: 1rem;
+}
+
+#hello {
+    font-size: 0.8rem;
+}
+
+#account {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.returns {
+    align-content: center;
+    margin-left: 25px;
+}
+
+#R {
+    font-size: 0.8rem;
+}
+
+#O {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.nav-cart {
+    margin-left: 25px;
+    display: flex;
+}
+
+.cart-icon {
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+#cart {
+    align-content: center;
+}
+
+.panel {
+    background-color: #232f3e;
+    height: 40px;
+    color: white;
+    display: flex;
+}
+
+.panel-menu {
+    display: inline-block;
+    align-content: center;
+    margin-left: 10px;
+}
+
+.complementry {
+    align-content: center;
+    display: flex;
+    font-size: 0.9rem;
+    width: 500px;
+    justify-content: space-evenly;
+
+
+}
+
+
+.Hello{
+    background-color: #232f3e;
+    color: white;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+p {
+    align-content: center;
+}
+
+.backimg-container1 {
+    position: relative;
+    size: 1rem;
+}
+
+.backimg-container2 {
+    position: relative;
+    size: 1rem;
+}
+
+#image1 {
+    width: 100%;
+}
+
+#backimg2 {
+    width: 100%;
+    height: 635px;
+}
+
+.coment {
+    background-color: white;
+    display: inline;
+    position: absolute;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 350px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.img-container-2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    position: absolute;
+    top: 405px;
+    size: 1rem;
+}
+
+.box1 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+
+}
+
+.ibox11 {
+    display: flex;
+}
+
+.part11 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.part12 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#image2 {
+    width: 100%;
+    display: inline;
+}
+
+#image3 {
+    width: 100%;
+    display: inline;
+}
+
+.ibox12 {
+    display: flex;
+}
+
+.part13 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.part14 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#image4 {
+    width: 100%;
+    display: inline;
+}
+
+#image5 {
+    width: 100%;
+    display: inline;
+}
+
+/* from here we write for box2 */
+.box2 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+
+}
+
+.ibox21 {
+    display: flex;
+}
+
+.part21 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.part22 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#image6 {
+    width: 100%;
+    display: inline;
+}
+
+#image7 {
+    width: 100%;
+    display: inline;
+}
+
+.ibox22 {
+    display: flex;
+}
+
+.part23 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.part24 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#image8 {
+    width: 100%;
+    display: inline;
+}
+
+#image9 {
+    width: 100%;
+    display: inline;
+}
+
+/* from here we write for box3 */
+.box3 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+
+}
+
+.ibox31 {
+    display: flex;
+}
+
+.part31 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.part32 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#image10 {
+    width: 100%;
+    display: inline;
+}
+
+#image11 {
+    width: 100%;
+    display: inline;
+}
+
+.ibox32 {
+    display: flex;
+}
+
+.part33 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.part34 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#image12 {
+    width: 100%;
+    display: inline;
+}
+
+#image13 {
+    width: 100%;
+    display: inline;
+}
+
+/* from here we write for box4 */
+
+.box4 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+}
+
+#image14 {
+    width: 100%;
+    display: inline;
+}
+
+/* here content s line 1 ends and new line starts
+from here we write for box5 */
+
+.img-container3 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    position: absolute;
+    top: 865px;
+    size: 1rem;
+}
+
+.box5 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+
+}
+
+.ibox51 {
+    width: 100%;
+
+
+}
+
+#image15 {
+    width: 100%;
+}
+
+.ibox52 {
+    display: flex;
+}
+
+.part52 {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+
+.part53 {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+
+.part54 {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+
+#image16 {
+    width: 100%;
+    display: inline;
+}
+
+#image17 {
+    width: 100%;
+    display: inline;
+}
+
+#image18 {
+    width: 100%;
+    display: inline;
+}
+
+/* from here we write for box6 */
+.box6 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+
+}
+
+.ibox61 {
+    display: flex;
+}
+
+.part61 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+}
+
+.part62 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+}
+
+#image19 {
+    width: 100%;
+}
+
+#image20 {
+    width: 100%;
+}
+
+.ibox32 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* .part63 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+}
+
+.part64 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+} */
+
+#image21 {
+    width: 50%;
+
+}
+
+/* #image22 {
+    width: 100%;
+
+} */
+
+/* adjusted according to me due inapropriate adjusting */
+
+/* from here we write for box7 */
+.box7 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+}
+
+#image23 {
+    width: 100%;
+    display: inline;
+}
+
+/* from here we write for box8 */
+.box8 {
+    width: 333px;
+    height: 420px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+}
+
+#image24 {
+    width: 100%;
+    display: inline;
+}
+
+.image-container4 {
+    position: relative;
+    background-color: pink;
+    bottom: 500px;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    background-color: pink;
+}
+
+.content-head {
+    font-size: 21px;
+    font-weight: bold;
+    background-color: pink;
+}
