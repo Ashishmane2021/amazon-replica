@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amazon Clone</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,9 +12,16 @@
 </head>
 
 <body>
-    <div class="slidingmenu">
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Sliding Menu -->
+    <div class="slidingmenu" id="slidingMenu">
         <div class="Hello">
-            Hello, sign in
+            <span>Hello, sign in</span>
+            <button class="close-menu" id="closeMenu">
+                <i class="fa-solid fa-times"></i>
+            </button>
         </div>
         <div class="list1"> 
             <div class="list">Digital Content & Devices</div> 
@@ -30,33 +37,20 @@
             <div class="t1">Arts & crafts</div>
             <div class="t1">Smart Home</div>
         </div>
-        <!-- <div class="list2">
-            <div class="t1">Prime Video</div>
-            <div class="t1">Amazon Music</div>
-            <div class="t1">Kindle E-reader & Books</div>
-            <div class="t1">Amazon Appstore</div>
-        </div>
-        <div class="list1">
-            <div class="t1">Prime Video</div>
-            <div class="t2">Amazon Music</div>
-            <div class="t3">Kindle E-reader & Books</div>
-            <div class="t4">Amazon Appstore</div>
-        </div> -->
     </div>
+
     <header>
         <div class="navbar">
             <div class="nav-logo border">
-                <div class="logo">
-
-                </div>
+                <div class="logo"></div>
             </div>
             <div class="address border">
-                <div class="adress1">
+                <div class="address1">
                     <p>Deliver to</p>
                 </div>
                 <div class="adress2">
-                    <div clas="iconloc">
-                        <i class="fa-solid fa-location-dot" class=></i>
+                    <div class="iconloc">
+                        <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <p class="country">India</p>
                 </div>
@@ -73,7 +67,6 @@
                     <option>Boys fashion</option>
                     <option>Computers</option>
                     <option>Electronics</option>
-
                 </select>
                 <input placeholder="Search Amazon.in" class="search-input">
                 <div class="search-icon border">
@@ -100,15 +93,16 @@
                 <p id="cart">Cart</p>
             </div>
         </div>
+        
         <div class="panel">
-            <div class="panel-menu border">
+            <div class="panel-menu border" id="menuToggle">
                 <i class="fa-solid fa-bars"></i>
                 All
             </div>
             <div class="complementry">
                 <p class="border">Today's Deals</p>
                 <p class="border">Registry</p>
-                <p class="border">coustomer care</p>
+                <p class="border">Customer Care</p>
                 <p class="border">Gift Cards</p>
                 <p class="border">Sell</p>
             </div>
@@ -116,305 +110,233 @@
         
         <div class="content">
             <div class="backimg-container1">
-                <img id="image1" src="/HTML/project_background_img.jpg">
+                <div id="image1"></div>
             </div>
             <div class="backimg-container2">
-                <img id="backimg2" src="/HTML/project_background_img2.jpg">
+                <div id="backimg2"></div>
             </div>
             <div class="coment">
                 <span class="content-1">You are on amazon.com. You can also shop on Amazon India for millions of
                     products with fast local delivery.
                 </span>
-                <a id="redirect_link" href="https://www.amazon.in/" target="_main"> Click here to go to amazon.in</a>
+                <a id="redirect_link" href="https://www.amazon.in/" target="_blank"> Click here to go to amazon.in</a>
             </div>
+            
             <div class="img-container-2">
                 <div class="box1">
-                    <h2 id="head1">
-                        Gaming Accessories
-                    </h2>
-                    <br>
-                    <br>
+                    <h2>Gaming Accessories</h2>
                     <div class="ibox11">
                         <div class="part11">
-                            <a
-                                href="https://www.amazon.com/s?k=gaming+headsets&_encoding=UTF8&content-id=amzn1.sym.12129333-2117-4490-9c17-6d31baf0582a&pd_rd_r=39fae25b-cbe8-4bcc-92f7-cd29148d332c&pd_rd_w=SfBKS&pd_rd_wg=KcID0&pf_rd_p=12129333-2117-4490-9c17-6d31baf0582a&pf_rd_r=42SBZ9ZGZM3YG2G9G3CK&ref=pd_hp_d_atf_unk">
-                                <img id="image2" src="/HTML/project/image2.jpg">
-                            </a>
-                            <p id="t1">Headsets</p>
+                            <div id="image2"></div>
+                            <p>Headsets</p>
                         </div>
                         <div class="part12">
-                            <a
-                                href="https://www.amazon.com/s?k=gaming+keyboard&_encoding=UTF8&content-id=amzn1.sym.12129333-2117-4490-9c17-6d31baf0582a&pd_rd_r=39fae25b-cbe8-4bcc-92f7-cd29148d332c&pd_rd_w=SfBKS&pd_rd_wg=KcID0&pf_rd_p=12129333-2117-4490-9c17-6d31baf0582a&pf_rd_r=42SBZ9ZGZM3YG2G9G3CK&ref=pd_hp_d_atf_unk">
-                                <img id="image3" src="/HTML/project/image3.jpg">
-                            </a>
-
-                            <p id="t2">Keyboards</p>
+                            <div id="image3"></div>
+                            <p>Keyboards</p>
                         </div>
-                        `
                     </div>
                     <div class="ibox12">
                         <div class="part13">
-                            <a
-                                href="https://www.amazon.com/s?k=gaming+mouse&_encoding=UTF8&content-id=amzn1.sym.12129333-2117-4490-9c17-6d31baf0582a&pd_rd_r=39fae25b-cbe8-4bcc-92f7-cd29148d332c&pd_rd_w=SfBKS&pd_rd_wg=KcID0&pf_rd_p=12129333-2117-4490-9c17-6d31baf0582a&pf_rd_r=42SBZ9ZGZM3YG2G9G3CK&ref=pd_hp_d_atf_unk">
-                                <img id="image4" src="/HTML/project/image4.jpg">
-                            </a>
-
-                            <p id="t1">Computer Mice</p>
+                            <div id="image4"></div>
+                            <p>Computer Mice</p>
                         </div>
                         <div class="part14">
-                            <a
-                                href="https://www.amazon.com/s?k=gaming+chairs&_encoding=UTF8&content-id=amzn1.sym.12129333-2117-4490-9c17-6d31baf0582a&pd_rd_r=39fae25b-cbe8-4bcc-92f7-cd29148d332c&pd_rd_w=SfBKS&pd_rd_wg=KcID0&pf_rd_p=12129333-2117-4490-9c17-6d31baf0582a&pf_rd_r=42SBZ9ZGZM3YG2G9G3CK&ref=pd_hp_d_atf_unk">
-                                <img id="image5" src="/HTML/project/image5.jpg">
-                            </a>
-
-                            <p id="t2">Chairs</p>
+                            <div id="image5"></div>
+                            <p>Chairs</p>
                         </div>
                     </div>
-                    <br>
-                    <a href="https://google.com" target="_main"> See more </a>
+                    <a href="#" target="_blank">See more</a>
                 </div>
-                <!-- //from here we write for box2//                -->
+
                 <div class="box2">
-                    <h2 id="head2">
-                        Shop for your home essentials
-                    </h2>
-                    <br>
-                    <br>
+                    <h2>Shop for your home essentials</h2>
                     <div class="ibox21">
                         <div class="part21">
-                            <a
-                                href="https://www.amazon.com/s?k=cleaning+tools&_encoding=UTF8&content-id=amzn1.sym.83009b1f-702c-4be7-814b-0240b8f687d2&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=dbz9f&pd_rd_wg=0Tbh3&pf_rd_p=83009b1f-702c-4be7-814b-0240b8f687d2&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&ref=pd_hp_d_atf_unk">
-                                <img id="image6" src="/HTML/project/image6.jpg">
-                            </a>
-
-                            <p id="t1">Headsets</p>
+                            <div id="image6"></div>
+                            <p>Cleaning Tools</p>
                         </div>
                         <div class="part22">
-                            <a
-                                href="https://www.amazon.com/s?k=home+storage&_encoding=UTF8&content-id=amzn1.sym.83009b1f-702c-4be7-814b-0240b8f687d2&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=dbz9f&pd_rd_wg=0Tbh3&pf_rd_p=83009b1f-702c-4be7-814b-0240b8f687d2&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&ref=pd_hp_d_atf_unk">
-                                <img id="image7" src="/HTML/project/image7.jpg">
-                            </a>
-
-                            <p id="t2">Keyboards</p>
+                            <div id="image7"></div>
+                            <p>Home Storage</p>
                         </div>
-                        `
                     </div>
                     <div class="ibox22">
                         <div class="part23">
-                            <a
-                                href="https://www.amazon.com/s?k=home+decor&_encoding=UTF8&content-id=amzn1.sym.83009b1f-702c-4be7-814b-0240b8f687d2&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=dbz9f&pd_rd_wg=0Tbh3&pf_rd_p=83009b1f-702c-4be7-814b-0240b8f687d2&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&ref=pd_hp_d_atf_unk">
-                                <img id="image8" src="/HTML/project/image8.jpg">
-                            </a>
-
-                            <p id="t1">Computer Mice</p>
+                            <div id="image8"></div>
+                            <p>Home Decor</p>
                         </div>
                         <div class="part24">
-                            <a
-                                href="https://www.amazon.com/s?k=bedding&_encoding=UTF8&content-id=amzn1.sym.83009b1f-702c-4be7-814b-0240b8f687d2&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=dbz9f&pd_rd_wg=0Tbh3&pf_rd_p=83009b1f-702c-4be7-814b-0240b8f687d2&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&ref=pd_hp_d_atf_unk">
-                                <img id="image5" src="/HTML/project/image9.jpg">
-                            </a>
-
-                            <p id="t2">Chairs</p>
+                            <div id="image9"></div>
+                            <p>Bedding</p>
                         </div>
                     </div>
-                    <br>
-                    <a href="https://google.com" target="_main"> See more </a>
+                    <a href="#" target="_blank">See more</a>
                 </div>
-                <!-- from here we write for box3              -->
+
                 <div class="box3">
-                    <h2 id="head3">
-                        Shop for your home essentials
-                    </h2>
-                    <br>
-                    <br>
+                    <h2>Fashion trends you like</h2>
                     <div class="ibox31">
                         <div class="part31">
-                            <a
-                                href="https://www.amazon.com/s?k=Jeans&rh=n%3A1040660%2Cn%3A1048188%2Cp_36%3A-5000&dc&ds=v1%3AZrh2YeJ%2Bmo6tc5p1QJD9idnCpBDTF2pKNTUbGqlhFKk&_encoding=UTF8&content-id=amzn1.sym.56e14e61-447a-443b-9528-4b285fddeeac&crid=1TZCO6ZC2HZVA&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=oOcoN&pd_rd_wg=0Tbh3&pf_rd_p=56e14e61-447a-443b-9528-4b285fddeeac&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&qid=1684823801&rnid=2941120011&sprefix=jeans%2Caps%2C155&ref=pd_hp_d_atf_unk">
-                                <img id="image10" src="/HTML/project/image10.jpg">
-                            </a>
-
-                            <p id="t1">Headsets</p>
+                            <div id="image10"></div>
+                            <p>Jeans under $50</p>
                         </div>
                         <div class="part32">
-                            <a
-                                href="https://www.amazon.com/s?k=Tops&rh=p_36%3A-2500&_encoding=UTF8&content-id=amzn1.sym.56e14e61-447a-443b-9528-4b285fddeeac&crid=19AKO4YZK6ZPJ&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=oOcoN&pd_rd_wg=0Tbh3&pf_rd_p=56e14e61-447a-443b-9528-4b285fddeeac&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&qid=1684823853&rnid=2661611011&sprefix=tops%2Caps%2C250&ref=pd_hp_d_atf_unk">
-                                <img id="image11" src="/HTML/project/image11.jpg">
-                            </a>
-
-                            <p id="t2">Keyboards</p>
+                            <div id="image11"></div>
+                            <p>Tops under $25</p>
                         </div>
-                        `
                     </div>
                     <div class="ibox32">
                         <div class="part33">
-                            <a
-                                href="https://www.amazon.com/s?k=Dresses&rh=p_36%3A-3000&_encoding=UTF8&content-id=amzn1.sym.56e14e61-447a-443b-9528-4b285fddeeac&crid=Y67PJX929LXO&pd_rd_r=d250fb93-dbaf-4bf5-8aed-80f96dcdc801&pd_rd_w=Jg4Tt&pd_rd_wg=g39id&pf_rd_p=56e14e61-447a-443b-9528-4b285fddeeac&pf_rd_r=MGPF2PX8WYWX7Q1V30V9&qid=1684823891&rnid=2661611011&sprefix=dresses%2Caps%2C149&ref=pd_hp_d_atf_unk">
-                                <img id="image12" src="/HTML/project/image12.jpg">
-                            </a>
-
-                            <p id="t1">Computer Mice</p>
+                            <div id="image12"></div>
+                            <p>Dresses under $30</p>
                         </div>
                         <div class="part34">
-                            <a
-                                href="https://www.amazon.com/s?k=Shoes&rh=p_36%3A-5000&_encoding=UTF8&content-id=amzn1.sym.56e14e61-447a-443b-9528-4b285fddeeac&crid=1QEZIUFPCL3YZ&pd_rd_r=d250fb93-dbaf-4bf5-8aed-80f96dcdc801&pd_rd_w=Jg4Tt&pd_rd_wg=g39id&pf_rd_p=56e14e61-447a-443b-9528-4b285fddeeac&pf_rd_r=MGPF2PX8WYWX7Q1V30V9&qid=1684823927&rnid=2661611011&sprefix=shoes%2Caps%2C145&ref=pd_hp_d_atf_unk">
-                                <img id="image13" src="/HTML/project/image13.jpg">
-                            </a>
-
-                            <p id="t2">Chairs</p>
+                            <div id="image13"></div>
+                            <p>Shoes under $50</p>
                         </div>
                     </div>
-                    <br>
-                    <a href="https://google.com" target="_main"> See more </a>
+                    <a href="#" target="_blank">See more</a>
                 </div>
-                <!-- from here we write for box4                -->
+
                 <div class="box4">
                     <h2>Get your game on</h2>
-                    <br>
-                    <br>
-                    <div class="ibox41">
-                        <a
-                            href="https://www.amazon.com/s?k=gaming&_encoding=UTF8&content-id=amzn1.sym.860dbf94-9f09-4ada-8615-32eb5ada253a&pd_rd_r=677b10d1-057f-4cff-8614-ebf4cfb4adad&pd_rd_w=ae3XI&pd_rd_wg=0Tbh3&pf_rd_p=860dbf94-9f09-4ada-8615-32eb5ada253a&pf_rd_r=7FS45QSPTYJG4FB4A6EQ&ref=pd_hp_d_atf_unk">
-                            <img id="image14" src="/HTML/project/image14.jpg">
-                        </a>
-
-                    </div>
-                    <a href="https://google.com" target="_main">See more</a>
+                    <div id="image14"></div>
+                    <a href="#" target="_blank">See more</a>
                 </div>
             </div>
 
-            <!-- From here new line starts 
- from here we write for box5            -->
             <div class="img-container3">
                 <div class="box5">
-                    <h2 id="head3">
-                        Shop for your home essentials
-                    </h2>
-                    <br>
-                    <br>
+                    <h2>Refresh your space</h2>
                     <div class="ibox51">
-                        <img id="image15" src="/HTML/project/image15.jpg">
-                        <p id="t1">Headsets</p>
-
+                        <div id="image15"></div>
+                        <p>Dining</p>
                     </div>
                     <div class="ibox52">
                         <div class="part52">
-                            <img id="image16" src="/HTML/project/image16.jpg">
-                            <p id="t2">Keyboards</p>
+                            <div id="image16"></div>
+                            <p>Home</p>
                         </div>
                         <div class="part53">
-                            <img id="image17" src="/HTML/project/image17.jpg">
-                            <p id="t1">Computer Mice</p>
+                            <div id="image17"></div>
+                            <p>Kitchen</p>
                         </div>
                         <div class="part54">
-                            <img id="image17" src="/HTML/project/image18.jpg">
-                            <p id="t2">Chairs</p>
+                            <div id="image18"></div>
+                            <p>Health</p>
                         </div>
                     </div>
-                    <br>
-                    <a href="https://google.com" target="_main"> See more </a>
+                    <a href="#" target="_blank">See more</a>
                 </div>
 
-                <!-- from here we write for box6                -->
                 <div class="box6">
-                    <h2 id="head6">
-                        Shop for your home essentials
-                    </h2>
-                    <br>
-                    <br>
+                    <h2>Shop activity trackers</h2>
                     <div class="ibox61">
                         <div class="part61">
-                            <img id="image19" src="/HTML/project/image19.jpg">
-                            <p id="t1">Headsets</p>
+                            <div id="image19"></div>
+                            <p>Fitness trackers</p>
                         </div>
                         <div class="part62">
-                            <img id="image20" src="/HTML/project/image20.jpg">
-                            <p id="t2">Keyboards</p>
+                            <div id="image20"></div>
+                            <p>Smart watches</p>
                         </div>
-                        `
                     </div>
                     <div class="ibox62">
-                        <!-- <div class="part63"> -->
-                        <img id="image21" src="/HTML/project/image21.jpg">
-                        <p id="t1">Computer Mice</p>
-                        <!-- </div> -->
-                        <!-- <div class="part64">
-                            <img id="image22" src="/HTML/project/image22.jpg">
-                            <p id="t2">Chairs</p>
-                        </div> -->
+                        <div id="image21"></div>
+                        <p>Running watches</p>
                     </div>
-                    <br>
-                    <a href="https://google.com" target="_main"> See more </a>
+                    <a href="#" target="_blank">See more</a>
                 </div>
 
-                <!-- from here we write for box7  (it is similar to box 4)               -->
                 <div class="box7">
-                    <h2>Get your game on</h2>
-                    <br>
-                    <br>
-                    <div class="ibox71">
-                        <img id="image23" src="/HTML/project/image23.jpg">
-                    </div>
-                    <a href="https://google.com" target="_main">See more</a>
+                    <h2>Deals in PCs</h2>
+                    <div id="image23"></div>
+                    <a href="#" target="_blank">See more</a>
                 </div>
-                <!-- from here we write for box8  (it is similar to box 4 and box 7)               -->
+
                 <div class="box8">
-                    <h2>Get your game on</h2>
-                    <br>
-                    <br>
-                    <div class="ibox81">
-                        <img id="image24" src="/HTML/project/image24.jpg">
-                    </div>
-                    <a href="https://google.com" target="_main">See more</a>
+                    <h2>Easy updates for elevated spaces</h2>
+                    <div id="image24"></div>
+                    <a href="#" target="_blank">See more</a>
                 </div>
             </div>
 
-            <div class="img-container4">
+            <div class="image-container4">
                 <div class="content-head">
                     <span>Top picks for India</span>
                 </div>
                 <div class="scroll-container">
-                    <img id="image25" src="/HTML/project/image25.jpg">
-                    <img id="image26" src="/HTML/project/image26.jpg">
-                    <img id="image27" src="/HTML/project/image27.jpg">
-                    <img id="image28" src="/HTML/project/image28.jpg">
-                    <img id="image29" src="/HTML/project/image29.jpg">
-                    <img id="image30" src="/HTML/project/image30.jpg">
-                    <img id="image30" src="/HTML/project/image31.jpg">
-                    <img id="image30" src="/HTML/project/image32.jpg">
-                    <img id="image30" src="/HTML/project/image33.jpg">
-                    <img id="image30" src="/HTML/project/image34.jpg">
-                    <img id="image30" src="/HTML/project/image35.jpg">
-                    <img id="image30" src="/HTML/project/image36.jpg">
-                    <img id="image30" src="/HTML/project/image37.jpg">
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
                 </div>
             </div>
+
             <div class="img-container5">
                 <div class="content-head">
                     <span>Best sellers in Sports and Outdoors</span>
                 </div>
                 <div class="scroll-container">
-                    <img id="image38" src="/HTML/project/image38.jpg">
-                    <img id="image39" src="/HTML/project/image39.jpg">
-                    <img id="image40" src="/HTML/project/image40.jpg">
-                    <img id="image41" src="/HTML/project/image41.jpg">
-                    <img id="image42" src="/HTML/project/image42.jpg">
-                    <img id="image43" src="/HTML/project/image43.jpg">
-                    <img id="image44" src="/HTML/project/image44.jpg">
-                    <img id="image45" src="/HTML/project/image45.jpg">
-                    <img id="image46" src="/HTML/project/image46.jpg">
-                    <img id="image47" src="/HTML/project/image47.jpg">
-                    <img id="image48" src="/HTML/project/image48.jpg">
-                    <img id="image49" src="/HTML/project/image49.jpg">
-                    <img id="image50" src="/HTML/project/image50.jpg">
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
+                    <div style="width: 150px; height: 150px; display: inline-block; background: #f0f0f0; margin-right: 10px;"></div>
                 </div>
             </div>
-
         </div>
-        </div>
-
-
     </header>
+
+    <script>
+        // Get DOM elements
+        const menuToggle = document.getElementById('menuToggle');
+        const slidingMenu = document.getElementById('slidingMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Function to open menu
+        function openMenu() {
+            slidingMenu.classList.add('active');
+            menuOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Function to close menu
+        function closeMenuFunc() {
+            slidingMenu.classList.remove('active');
+            menuOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Event listeners
+        menuToggle.addEventListener('click', openMenu);
+        closeMenu.addEventListener('click', closeMenuFunc);
+        menuOverlay.addEventListener('click', closeMenuFunc);
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!slidingMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                if (slidingMenu.classList.contains('active')) {
+                    closeMenuFunc();
+                }
+            }
+        });
+
+        // Close menu with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && slidingMenu.classList.contains('active')) {
+                closeMenuFunc();
+            }
+        });
+    </script>
 </body>
 
 </html>
