@@ -1,18 +1,85 @@
 * {
     margin: 0;
-    font-family: arial;
-    border: border-box;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
 }
 
-.slidingmenu{
-    width: -365px;
+/* Overlay for sliding menu */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.slidingmenu {
+    width: 365px;
     height: 100%;
     background-color: white;
-    position:fixed;
-    
+    position: fixed;
+    top: 0;
+    left: -365px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
 }
+
+.slidingmenu.active {
+    left: 0;
+}
+
+.Hello {
+    background-color: #232f3e;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.list1, .list2 {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.list {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #232f3e;
+}
+
+.t1 {
+    padding: 8px 30px;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.t1:hover {
+    background-color: #f0f0f0;
+}
+
 .border {
     border: 1px solid transparent;
+    padding: 8px;
+    cursor: pointer;
 }
 
 .border:hover {
@@ -25,50 +92,52 @@
     background-color: #0f1111;
     display: flex;
     position: fixed;
-
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    align-items: center;
 }
 
 .nav-logo {
     height: 50px;
     width: 110px;
     margin-right: 15px;
-
 }
 
 .logo {
-    background-image: url("amazon-logo.jpg");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Ctext x='5' y='30' fill='white' font-family='Arial' font-size='20' font-weight='bold'%3Eamazon%3C/text%3E%3C/svg%3E");
     height: 50px;
     width: 100px;
     margin-left: 10px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .address {
     align-content: center;
+    margin-right: 15px;
 }
 
 .address1 {
     color: #cccccc;
     font-size: 0.8rem;
     padding-left: 20px;
-
 }
 
 .country {
     font-size: 1rem;
-
 }
 
 .adress2 {
     display: flex;
     align-items: center;
+    padding-left: 20px;
 }
 
 .nav-search {
     display: flex;
     width: 900px;
     height: 40px;
-    margin-top: 10px;
     margin-left: 15px;
     justify-content: space-between;
 }
@@ -80,6 +149,7 @@
     border-bottom-left-radius: 5px;
     background-color: white;
     font-weight: bold;
+    border: none;
 }
 
 option {
@@ -92,11 +162,14 @@ option {
     background-color: rgb(253, 167, 18);
     text-align: center;
     align-content: center;
+    border: none;
 }
 
 .search-input {
     flex-grow: 1;
     flex-shrink: 1;
+    border: none;
+    padding: 0 10px;
 }
 
 .nav-lang {
@@ -106,10 +179,16 @@ option {
     margin-left: 30px;
 }
 
+.nav-lang select {
+    background: none;
+    border: none;
+    color: white;
+}
+
 .nav-signin {
     align-content: center;
     margin-left: 25px;
-    size: 1rem;
+    font-size: 1rem;
 }
 
 #hello {
@@ -138,15 +217,12 @@ option {
 .nav-cart {
     margin-left: 25px;
     display: flex;
+    align-items: center;
 }
 
 .cart-icon {
-    padding-top: 15px;
     font-size: 30px;
-}
-
-#cart {
-    align-content: center;
+    margin-right: 5px;
 }
 
 .panel {
@@ -154,12 +230,22 @@ option {
     height: 40px;
     color: white;
     display: flex;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 99;
+    align-items: center;
 }
 
 .panel-menu {
-    display: inline-block;
-    align-content: center;
+    display: flex;
+    align-items: center;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.panel-menu i {
+    margin-right: 8px;
 }
 
 .complementry {
@@ -168,51 +254,38 @@ option {
     font-size: 0.9rem;
     width: 500px;
     justify-content: space-evenly;
-
-
 }
 
-
-.Hello{
-    background-color: #232f3e;
-    color: white;
-    height:50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 2rem;
-}
-p {
-    align-content: center;
+.content {
+    margin-top: 100px;
 }
 
 .backimg-container1 {
     position: relative;
-    size: 1rem;
 }
 
 .backimg-container2 {
     position: relative;
-    size: 1rem;
 }
 
 #image1 {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background: linear-gradient(to bottom, #87CEEB, #98D8E8);
 }
 
 #backimg2 {
     width: 100%;
     height: 635px;
+    object-fit: cover;
+    background: linear-gradient(to bottom, #87CEEB, #98D8E8);
 }
 
 .coment {
     background-color: white;
-    display: inline;
     position: absolute;
     padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     top: 350px;
     left: 20px;
     right: 20px;
@@ -226,219 +299,7 @@ p {
     margin: 10px;
     position: absolute;
     top: 405px;
-    size: 1rem;
 }
-
-.box1 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-
-}
-
-.ibox11 {
-    display: flex;
-}
-
-.part11 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.part12 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#image2 {
-    width: 100%;
-    display: inline;
-}
-
-#image3 {
-    width: 100%;
-    display: inline;
-}
-
-.ibox12 {
-    display: flex;
-}
-
-.part13 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.part14 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#image4 {
-    width: 100%;
-    display: inline;
-}
-
-#image5 {
-    width: 100%;
-    display: inline;
-}
-
-/* from here we write for box2 */
-.box2 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-
-}
-
-.ibox21 {
-    display: flex;
-}
-
-.part21 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.part22 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#image6 {
-    width: 100%;
-    display: inline;
-}
-
-#image7 {
-    width: 100%;
-    display: inline;
-}
-
-.ibox22 {
-    display: flex;
-}
-
-.part23 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.part24 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#image8 {
-    width: 100%;
-    display: inline;
-}
-
-#image9 {
-    width: 100%;
-    display: inline;
-}
-
-/* from here we write for box3 */
-.box3 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-
-}
-
-.ibox31 {
-    display: flex;
-}
-
-.part31 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.part32 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#image10 {
-    width: 100%;
-    display: inline;
-}
-
-#image11 {
-    width: 100%;
-    display: inline;
-}
-
-.ibox32 {
-    display: flex;
-}
-
-.part33 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.part34 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#image12 {
-    width: 100%;
-    display: inline;
-}
-
-#image13 {
-    width: 100%;
-    display: inline;
-}
-
-/* from here we write for box4 */
-
-.box4 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-}
-
-#image14 {
-    width: 100%;
-    display: inline;
-}
-
-/* here content s line 1 ends and new line starts
-from here we write for box5 */
 
 .img-container3 {
     display: flex;
@@ -446,173 +307,61 @@ from here we write for box5 */
     margin: 10px;
     position: absolute;
     top: 865px;
-    size: 1rem;
 }
 
-.box5 {
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
     width: 333px;
     height: 420px;
     background-color: white;
-    display: inline-block;
     margin: 10px;
-    padding: 10px;
-    align-content: center;
+    padding: 20px;
+}
 
+.box1 h2, .box2 h2, .box3 h2, .box4 h2, .box5 h2, .box6 h2, .box7 h2, .box8 h2 {
+    margin-bottom: 15px;
+}
+
+.ibox11, .ibox12, .ibox21, .ibox22, .ibox31, .ibox32, .ibox52, .ibox61 {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.part11, .part12, .part13, .part14, .part21, .part22, .part23, .part24, 
+.part31, .part32, .part33, .part34, .part52, .part53, .part54, .part61, .part62 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+}
+
+.part52, .part53, .part54 {
+    width: 33.33%;
 }
 
 .ibox51 {
+    margin-bottom: 10px;
+}
+
+.ibox62 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9,
+#image10, #image11, #image12, #image13, #image14, #image15, #image16, #image17, #image18,
+#image19, #image20, #image21, #image22, #image23, #image24 {
     width: 100%;
-
-
+    height: 100px;
+    object-fit: cover;
+    background: #f0f0f0;
+    margin-bottom: 5px;
 }
 
-#image15 {
-    width: 100%;
-}
-
-.ibox52 {
-    display: flex;
-}
-
-.part52 {
-    display: flex;
-    flex-direction: column;
-    width: 33.33%;
-}
-
-.part53 {
-    display: flex;
-    flex-direction: column;
-    width: 33.33%;
-}
-
-.part54 {
-    display: flex;
-    flex-direction: column;
-    width: 33.33%;
-}
-
-#image16 {
-    width: 100%;
-    display: inline;
-}
-
-#image17 {
-    width: 100%;
-    display: inline;
-}
-
-#image18 {
-    width: 100%;
-    display: inline;
-}
-
-/* from here we write for box6 */
-.box6 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-
-}
-
-.ibox61 {
-    display: flex;
-}
-
-.part61 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 5px;
-}
-
-.part62 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 5px;
-}
-
-#image19 {
-    width: 100%;
-}
-
-#image20 {
-    width: 100%;
-}
-
-.ibox32 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-/* .part63 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 5px;
-}
-
-.part64 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 5px;
-} */
-
-#image21 {
-    width: 50%;
-
-}
-
-/* #image22 {
-    width: 100%;
-
-} */
-
-/* adjusted according to me due inapropriate adjusting */
-
-/* from here we write for box7 */
-.box7 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-}
-
-#image23 {
-    width: 100%;
-    display: inline;
-}
-
-/* from here we write for box8 */
-.box8 {
-    width: 333px;
-    height: 420px;
-    background-color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-}
-
-#image24 {
-    width: 100%;
-    display: inline;
-}
-
-.image-container4 {
+.image-container4, .img-container5 {
     position: relative;
-    background-color: pink;
-    bottom: 500px;
+    margin-top: 50px;
+    background-color: #f8f8f8;
+    padding: 20px;
 }
 
 .scroll-container {
@@ -620,11 +369,34 @@ from here we write for box5 */
     overflow-x: auto;
     white-space: nowrap;
     border: 1px solid #ccc;
-    background-color: pink;
+    background-color: white;
+    padding: 10px;
+}
+
+.scroll-container img {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    object-fit: cover;
+    background: #f0f0f0;
 }
 
 .content-head {
     font-size: 21px;
     font-weight: bold;
-    background-color: pink;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007185;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 2px 0;
 }
